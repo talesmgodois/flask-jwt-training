@@ -44,11 +44,11 @@ class DevelopmentConfig(Config):
     DEBUG = True
 
     SQLALCHEMY_DATABASE_URI = DatabaseConfig(
-        "ec2-107-21-98-165.compute-1.amazonaws.com",
+        "ec2-23-23-216-40.compute-1.amazonaws.com",
         "5432",
-        "d56h43lmoip4e8",
-        "yqoisniadbchdt",
-        "c315a03e9222d7e037996254358bf50a7139248e97f253dcf26ff65a9d26a317"
+        "d80922ahko5137",
+        "phghhujuxxkvsw",
+        "44bbd319299761082424509b7a7cae31a36c5f34225d64498046735970c8b914"
     ).get_uri()
 
 
