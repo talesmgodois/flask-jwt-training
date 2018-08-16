@@ -9,8 +9,6 @@ app = Flask(__name__)
 
 api = Api(app)
 
-
-
 app.config.from_object(environments.app_config['development'])
 
 db = SQLAlchemy(app)
