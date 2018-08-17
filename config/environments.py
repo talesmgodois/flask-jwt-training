@@ -35,7 +35,7 @@ class Config(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     DEBUG = False
     CSRF_ENABLED = True
-
+    JWT_SECRET_KEY ='jwt-secret-string'
     SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL')
 
 

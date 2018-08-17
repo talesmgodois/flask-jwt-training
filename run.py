@@ -1,9 +1,8 @@
 from flask import Flask
 from flask_restful import Api
 from flask_sqlalchemy import SQLAlchemy
-
+from flask_jwt_extended import JWTManager
 from config import environments
-
 
 app = Flask(__name__)
 
@@ -12,6 +11,8 @@ api = Api(app)
 app.config.from_object(environments.app_config['development'])
 
 db = SQLAlchemy(app)
+
+jwt = JWTManager(app)
 
 import views, models, resources
 
@@ -26,6 +27,7 @@ api.add_resource(resources.SecretResource, '/secret')
 @app.before_first_request
 def create_tables():
     db.create_all()
+
 
 if __name__ == '__main__':
     app.run()

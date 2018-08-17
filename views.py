@@ -1,7 +1,8 @@
+from flask import render_template
+
 from run import app
-from flask import jsonify
 
 
 @app.route('/')
 def index():
-    return jsonify({'message': 'Hello, World!'})
+    return render_template('index.html')
