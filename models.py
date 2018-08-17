@@ -18,8 +18,7 @@ class User(db.Model):
     def return_all(cls):
         def to_json(x):
             return {
-                'username': x.username,
-                'password': x.password
+                'username': x.username
             }
 
         return list(map(lambda x: to_json(x), User.query.all()))
