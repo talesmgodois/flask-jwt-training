@@ -30,6 +30,8 @@ class DatabaseConfig:
 
 class Config(object):
     """Parent configuration class."""
+    JWT_BLACKLIST_ENABLED = True
+    JWT_BLACKLIST_TOKEN_CHECKS = ['access', 'refresh']
     SECRET_KEY = "some-very-long-string-of-random-characters-CHANGE-TO-YOUR-LIKING"
     APP_SETTINGS = "development"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
